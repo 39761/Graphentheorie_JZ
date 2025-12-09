@@ -21,7 +21,7 @@ def tiefensuche(graph, node, goal, path, result, tiefe=0):
     for child in graph[node]:
         if child not in path:
             print(f"{einrueckung}Wir fahren von {node} zu {child}")
-            tiefensuche(graph, child, goal, path, result, tiefe + 1)
+            return tiefensuche(graph, child, goal, path, result, tiefe + 1)
 
     path.pop()
     print(f"{einrueckung}Pfad zu Ende: {node} aus Pfad entfernen | Pfad jetzt: {path}")
